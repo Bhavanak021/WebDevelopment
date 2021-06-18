@@ -1,0 +1,49 @@
+body {
+  background-image: url(https://i.pinimg.com/originals/8d/88/b0/8d88b094eab735506b66a4494338cf77.jpg);
+  background-size: cover;
+}
+h1 {
+  font-family: "Lemonada", cursive;
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  text-shadow: 10px 10px 10px black;
+}
+#container {
+  height: 640px;
+  width: 640px;
+  background-color: #9a8dcc;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  perspective: 1000px;
+}
+.memorycard {
+  width: 100px;
+  height: 80px;
+  background-color: lightseagreen;
+  text-align: center;
+  margin: 16px;
+  padding: 16px;
+  justify-content: center;
+  display: flex;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  transform: scale(1);
+}
+
+.image,
+.imageback {
+  position: absolute;
+}
+
+.memorycard.flip {
+  transform: rotateY(180deg);
+}
+.imageback {
+  backface-visibility: hidden;
+}
+.image {
+  transform: rotateY(180deg);
+}
